@@ -2,7 +2,7 @@
 <otobo_package version="1.1">
     <Name>LinkServiceFAQMerge</Name>
     <Version>1.0.0</Version>
-    <Vendor>Intelicolab</Vendor>
+    <Vendor>INTELICOLAB</Vendor>
     <URL>https://github.com/oeretana/LinkServiceFAQMerge</URL>
     <License>GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007</License>
     <Description Lang="en">Extends the OTOBO Generic Interface with 11 additional REST operations: TicketMerge, LinkList/Add/Delete, FAQSearch/Get (agent), ServiceGet/List/Search, SLAGet/List.</Description>

@@ -1,5 +1,5 @@
 # --
-# Copyright (C) 2026 Intelicolab
+# Copyright (C) 2026 INTELICOLAB
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (GPL). If you
