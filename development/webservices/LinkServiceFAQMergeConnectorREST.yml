@@ -1,0 +1,144 @@
+---
+Debugger:
+  DebugThreshold: error
+  TestMode: '0'
+Description: 'OTOBOLinkServiceFAQMerge: LinkObject, Service, SLA, FAQ agent and TicketMerge
+  operations for OTOBO Generic Interface.'
+FrameworkVersion: 10.1.14
+Provider:
+  Operation:
+    TicketMerge:
+      Description: Merge two tickets into one (irreversible).
+      MappingInbound:
+        Type: Simple
+      MappingOutbound:
+        Type: Simple
+      Type: Ticket::TicketMerge
+    LinkList:
+      Description: List links for a given object.
+      MappingInbound:
+        Type: Simple
+      MappingOutbound:
+        Type: Simple
+      Type: LinkObject::LinkList
+    LinkAdd:
+      Description: Create a link between two objects.
+      MappingInbound:
+        Type: Simple
+      MappingOutbound:
+        Type: Simple
+      Type: LinkObject::LinkAdd
+    LinkDelete:
+      Description: Delete a link between two objects.
+      MappingInbound:
+        Type: Simple
+      MappingOutbound:
+        Type: Simple
+      Type: LinkObject::LinkDelete
+    FAQSearch:
+      Description: Search FAQ articles (agent-level, all states).
+      MappingInbound:
+        Type: Simple
+      MappingOutbound:
+        Type: Simple
+      Type: FAQ::FAQSearch
+    FAQGet:
+      Description: Get a FAQ article by ID (agent-level, no state restriction).
+      MappingInbound:
+        Type: Simple
+      MappingOutbound:
+        Type: Simple
+      Type: FAQ::FAQGet
+    ServiceGet:
+      Description: Get a service by ID.
+      MappingInbound:
+        Type: Simple
+      MappingOutbound:
+        Type: Simple
+      Type: Service::ServiceGet
+    ServiceList:
+      Description: List all services.
+      MappingInbound:
+        Type: Simple
+      MappingOutbound:
+        Type: Simple
+      Type: Service::ServiceList
+    ServiceSearch:
+      Description: Search services by name pattern.
+      MappingInbound:
+        Type: Simple
+      MappingOutbound:
+        Type: Simple
+      Type: Service::ServiceSearch
+    SLAGet:
+      Description: Get an SLA by ID.
+      MappingInbound:
+        Type: Simple
+      MappingOutbound:
+        Type: Simple
+      Type: SLA::SLAGet
+    SLAList:
+      Description: List all SLAs.
+      MappingInbound:
+        Type: Simple
+      MappingOutbound:
+        Type: Simple
+      Type: SLA::SLAList
+  Transport:
+    Config:
+      AdditionalHeaders: ~
+      KeepAlive: ''
+      MaxLength: '100000000'
+      RouteOperationMapping:
+        TicketMerge:
+          RequestMethod:
+            - POST
+          Route: /TicketMerge
+        LinkList:
+          RequestMethod:
+            - GET
+            - POST
+          Route: /LinkList
+        LinkAdd:
+          RequestMethod:
+            - POST
+          Route: /LinkAdd
+        LinkDelete:
+          RequestMethod:
+            - POST
+          Route: /LinkDelete
+        FAQSearch:
+          RequestMethod:
+            - GET
+            - POST
+          Route: /FAQSearch
+        FAQGet:
+          RequestMethod:
+            - GET
+          Route: /FAQGet/:ItemID
+        ServiceGet:
+          RequestMethod:
+            - GET
+          Route: /ServiceGet/:ServiceID
+        ServiceList:
+          RequestMethod:
+            - GET
+          Route: /ServiceList
+        ServiceSearch:
+          RequestMethod:
+            - GET
+            - POST
+          Route: /ServiceSearch
+        SLAGet:
+          RequestMethod:
+            - GET
+          Route: /SLAGet/:SLAID
+        SLAList:
+          RequestMethod:
+            - GET
+          Route: /SLAList
+    Type: HTTP::REST
+RemoteSystem: ''
+Requester:
+  Transport:
+    Type: HTTP::REST

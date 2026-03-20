@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<otobo_config version="2.0" init="Application">
+
+    <!-- Ticket operations -->
+    <Setting Name="GenericInterface::Operation::Module###Ticket::TicketMerge" Required="0" Valid="1">
+        <Description Translatable="1">GenericInterface module registration for operation backend. Additional template: AdminGenericInterfaceOperationDefault.</Description>
+        <Navigation>GenericInterface::Operation::ModuleRegistration</Navigation>
+        <Value>
+            <Hash>
+                <Item Key="Name">TicketMerge</Item>
+                <Item Key="Controller">Ticket</Item>
+                <Item Key="ConfigDialog">AdminGenericInterfaceOperationDefault</Item>
+            </Hash>
+        </Value>
+    </Setting>
+
+    <!-- LinkObject operations -->
+    <Setting Name="GenericInterface::Operation::Module###LinkObject::LinkList" Required="0" Valid="1">
+        <Description Translatable="1">GenericInterface module registration for operation backend. Additional template: AdminGenericInterfaceOperationDefault.</Description>
+        <Navigation>GenericInterface::Operation::ModuleRegistration</Navigation>
+        <Value>
+            <Hash>
+                <Item Key="Name">LinkList</Item>
+                <Item Key="Controller">LinkObject</Item>
+                <Item Key="ConfigDialog">AdminGenericInterfaceOperationDefault</Item>
+            </Hash>
+        </Value>
+    </Setting>
+
+    <Setting Name="GenericInterface::Operation::Module###LinkObject::LinkAdd" Required="0" Valid="1">
+        <Description Translatable="1">GenericInterface module registration for operation backend. Additional template: AdminGenericInterfaceOperationDefault.</Description>
+        <Navigation>GenericInterface::Operation::ModuleRegistration</Navigation>
+        <Value>
+            <Hash>
+                <Item Key="Name">LinkAdd</Item>
+                <Item Key="Controller">LinkObject</Item>
+                <Item Key="ConfigDialog">AdminGenericInterfaceOperationDefault</Item>
+            </Hash>
+        </Value>
+    </Setting>
+
+    <Setting Name="GenericInterface::Operation::Module###LinkObject::LinkDelete" Required="0" Valid="1">
+        <Description Translatable="1">GenericInterface module registration for operation backend. Additional template: AdminGenericInterfaceOperationDefault.</Description>
+        <Navigation>GenericInterface::Operation::ModuleRegistration</Navigation>
+        <Value>
+            <Hash>
+                <Item Key="Name">LinkDelete</Item>
+                <Item Key="Controller">LinkObject</Item>
+                <Item Key="ConfigDialog">AdminGenericInterfaceOperationDefault</Item>
+            </Hash>
+        </Value>
+    </Setting>
+
+    <!-- FAQ operations (agent-level) -->
+    <Setting Name="GenericInterface::Operation::Module###FAQ::FAQSearch" Required="0" Valid="1">
+        <Description Translatable="1">GenericInterface module registration for operation backend. Additional template: AdminGenericInterfaceOperationDefault.</Description>
+        <Navigation>GenericInterface::Operation::ModuleRegistration</Navigation>
+        <Value>
+            <Hash>
+                <Item Key="Name">FAQSearch</Item>
+                <Item Key="Controller">FAQ</Item>
+                <Item Key="ConfigDialog">AdminGenericInterfaceOperationDefault</Item>
+            </Hash>
+        </Value>
+    </Setting>
+
+    <Setting Name="GenericInterface::Operation::Module###FAQ::FAQGet" Required="0" Valid="1">
+        <Description Translatable="1">GenericInterface module registration for operation backend. Additional template: AdminGenericInterfaceOperationDefault.</Description>
+        <Navigation>GenericInterface::Operation::ModuleRegistration</Navigation>
+        <Value>
+            <Hash>
+                <Item Key="Name">FAQGet</Item>
+                <Item Key="Controller">FAQ</Item>
+                <Item Key="ConfigDialog">AdminGenericInterfaceOperationDefault</Item>
+            </Hash>
+        </Value>
+    </Setting>
+
+    <!-- Service operations -->
+    <Setting Name="GenericInterface::Operation::Module###Service::ServiceGet" Required="0" Valid="1">
+        <Description Translatable="1">GenericInterface module registration for operation backend. Additional template: AdminGenericInterfaceOperationDefault.</Description>
+        <Navigation>GenericInterface::Operation::ModuleRegistration</Navigation>
+        <Value>
+            <Hash>
+                <Item Key="Name">ServiceGet</Item>
+                <Item Key="Controller">Service</Item>
+                <Item Key="ConfigDialog">AdminGenericInterfaceOperationDefault</Item>
+            </Hash>
+        </Value>
+    </Setting>
+
+    <Setting Name="GenericInterface::Operation::Module###Service::ServiceList" Required="0" Valid="1">
+        <Description Translatable="1">GenericInterface module registration for operation backend. Additional template: AdminGenericInterfaceOperationDefault.</Description>
+        <Navigation>GenericInterface::Operation::ModuleRegistration</Navigation>
+        <Value>
+            <Hash>
+                <Item Key="Name">ServiceList</Item>
+                <Item Key="Controller">Service</Item>
+                <Item Key="ConfigDialog">AdminGenericInterfaceOperationDefault</Item>
+            </Hash>
+        </Value>
+    </Setting>
+
+    <Setting Name="GenericInterface::Operation::Module###Service::ServiceSearch" Required="0" Valid="1">
+        <Description Translatable="1">GenericInterface module registration for operation backend. Additional template: AdminGenericInterfaceOperationDefault.</Description>
+        <Navigation>GenericInterface::Operation::ModuleRegistration</Navigation>
+        <Value>
+            <Hash>
+                <Item Key="Name">ServiceSearch</Item>
+                <Item Key="Controller">Service</Item>
+                <Item Key="ConfigDialog">AdminGenericInterfaceOperationDefault</Item>
+            </Hash>
+        </Value>
+    </Setting>
+
+    <!-- SLA operations -->
+    <Setting Name="GenericInterface::Operation::Module###SLA::SLAGet" Required="0" Valid="1">
+        <Description Translatable="1">GenericInterface module registration for operation backend. Additional template: AdminGenericInterfaceOperationDefault.</Description>
+        <Navigation>GenericInterface::Operation::ModuleRegistration</Navigation>
+        <Value>
+            <Hash>
+                <Item Key="Name">SLAGet</Item>
+                <Item Key="Controller">SLA</Item>
+                <Item Key="ConfigDialog">AdminGenericInterfaceOperationDefault</Item>
+            </Hash>
+        </Value>
+    </Setting>
+
+    <Setting Name="GenericInterface::Operation::Module###SLA::SLAList" Required="0" Valid="1">
+        <Description Translatable="1">GenericInterface module registration for operation backend. Additional template: AdminGenericInterfaceOperationDefault.</Description>
+        <Navigation>GenericInterface::Operation::ModuleRegistration</Navigation>
+        <Value>
+            <Hash>
+                <Item Key="Name">SLAList</Item>
+                <Item Key="Controller">SLA</Item>
+                <Item Key="ConfigDialog">AdminGenericInterfaceOperationDefault</Item>
+            </Hash>
+        </Value>
+    </Setting>
+
+</otobo_config>

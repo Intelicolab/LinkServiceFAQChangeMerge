@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<otobo_package version="1.1">
+    <Name>OTOBOLinkServiceFAQMerge</Name>
+    <Version>1.0.0</Version>
+    <Vendor>Intelicolab</Vendor>
+    <URL>https://github.com/oeretana/OTOBOLinkServiceFAQMerge</URL>
+    <License>GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007</License>
+    <Description Lang="en">Extends the OTOBO Generic Interface with 11 additional REST operations: TicketMerge, LinkList/Add/Delete, FAQSearch/Get (agent), ServiceGet/List/Search, SLAGet/List.</Description>
+    <Description Lang="es">Extiende el Generic Interface de OTOBO con 11 operaciones REST adicionales: TicketMerge, LinkList/Add/Delete, FAQSearch/Get (agente), ServiceGet/List/Search, SLAGet/List.</Description>
+    <Framework Minimum="10.1.0">10.1.x</Framework>
+    <Framework Minimum="11.0.0">11.0.x</Framework>
+    <Filelist>
+        <File Permission="660" Location="Kernel/Config/Files/XML/OTOBOLinkServiceFAQMerge.xml"/>
+        <File Permission="660" Location="Kernel/GenericInterface/Operation/Extensions/Common.pm"/>
+        <File Permission="660" Location="Kernel/GenericInterface/Operation/Ticket/TicketMerge.pm"/>
+        <File Permission="660" Location="Kernel/GenericInterface/Operation/LinkObject/LinkList.pm"/>
+        <File Permission="660" Location="Kernel/GenericInterface/Operation/LinkObject/LinkAdd.pm"/>
+        <File Permission="660" Location="Kernel/GenericInterface/Operation/LinkObject/LinkDelete.pm"/>
+        <File Permission="660" Location="Kernel/GenericInterface/Operation/FAQ/FAQSearch.pm"/>
+        <File Permission="660" Location="Kernel/GenericInterface/Operation/FAQ/FAQGet.pm"/>
+        <File Permission="660" Location="Kernel/GenericInterface/Operation/Service/ServiceGet.pm"/>
+        <File Permission="660" Location="Kernel/GenericInterface/Operation/Service/ServiceList.pm"/>
+        <File Permission="660" Location="Kernel/GenericInterface/Operation/Service/ServiceSearch.pm"/>
+        <File Permission="660" Location="Kernel/GenericInterface/Operation/SLA/SLAGet.pm"/>
+        <File Permission="660" Location="Kernel/GenericInterface/Operation/SLA/SLAList.pm"/>
+    </Filelist>
+    <CodeInstall Type="post"><![CDATA[
+        $Kernel::OM->Get('Kernel::System::Cache')->CleanUp();
+    ]]></CodeInstall>
+    <CodeReinstall Type="post"><![CDATA[
+        $Kernel::OM->Get('Kernel::System::Cache')->CleanUp();
+    ]]></CodeReinstall>
+    <CodeUpgrade Type="post"><![CDATA[
+        $Kernel::OM->Get('Kernel::System::Cache')->CleanUp();
+    ]]></CodeUpgrade>
+    <CodeUninstall Type="pre"><![CDATA[
+        $Kernel::OM->Get('Kernel::System::Cache')->CleanUp();
+    ]]></CodeUninstall>
+</otobo_package>
