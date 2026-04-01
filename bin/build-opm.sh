@@ -1,15 +1,15 @@
 #!/bin/bash
-# Build LinkServiceFAQChangeMerge.opm from .sopm and source files.
+# Build GenericInterfaceExtended.opm from .sopm and source files.
 # Does NOT require an OTOBO installation — portable build.
 #
 # Usage: ./bin/build-opm.sh
-# Output: dist/LinkServiceFAQChangeMerge-<version>.opm
+# Output: dist/GenericInterfaceExtended-<version>.opm
 
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 PROJECT_DIR="$(dirname "$SCRIPT_DIR")"
-SOPM_FILE="$PROJECT_DIR/LinkServiceFAQChangeMerge.sopm"
+SOPM_FILE="$PROJECT_DIR/GenericInterfaceExtended.sopm"
 
 if [ ! -f "$SOPM_FILE" ]; then
     echo "ERROR: $SOPM_FILE not found." >&2
@@ -25,9 +25,9 @@ fi
 
 OUTPUT_DIR="$PROJECT_DIR/dist"
 mkdir -p "$OUTPUT_DIR"
-OPM_FILE="$OUTPUT_DIR/LinkServiceFAQChangeMerge-${VERSION}.opm"
+OPM_FILE="$OUTPUT_DIR/GenericInterfaceExtended-${VERSION}.opm"
 
-echo "Building LinkServiceFAQChangeMerge v${VERSION}..."
+echo "Building GenericInterfaceExtended v${VERSION}..."
 
 # Start building the OPM XML
 {

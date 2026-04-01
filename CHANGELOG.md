@@ -37,6 +37,6 @@ This project adheres to [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 - **SLAList** (`GET /SLAList`) — list all SLAs.
 - **Extensions::Common** — internal shared base class providing `ValidateRequiredParams` used by all operation modules.
 - **`bin/build-opm.sh`** — portable build script that produces a self-contained `.opm` without requiring an OTOBO installation.
-- **Webservice YAML template** (`development/webservices/LinkServiceFAQChangeMergeConnectorREST.yml`) — ready-to-import Generic Interface webservice definition covering all 11 operations.
+- **Webservice YAML template** (`development/webservices/GenericInterfaceExtendedConnectorREST.yml`) — ready-to-import Generic Interface webservice definition covering all 11 operations.
 - **Soft dependencies** — FAQ and ITSMCore packages are optional; missing packages produce graceful errors rather than hard failures.
-- **SysConfig XML registration** (`Kernel/Config/Files/XML/LinkServiceFAQChangeMerge.xml`) — all operations are auto-discovered by OTOBO after a config rebuild.
+- **SysConfig XML registration** (`Kernel/Config/Files/XML/GenericInterfaceExtended.xml`) — all operations are auto-discovered by OTOBO after a config rebuild.

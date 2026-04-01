@@ -2,7 +2,7 @@
 Debugger:
   DebugThreshold: error
   TestMode: '0'
-Description: 'LinkServiceFAQChangeMerge: LinkObject, Service, SLA, FAQ agent, TicketMerge
+Description: 'GenericInterfaceExtended: LinkObject, Service, SLA, FAQ agent, TicketMerge
   and ITSMChangeManagement operations for OTOBO Generic Interface.'
 FrameworkVersion: 10.1.14
 Provider:
@@ -49,6 +49,20 @@ Provider:
       MappingOutbound:
         Type: Simple
       Type: FAQ::FAQGet
+    FAQAdd:
+      Description: Create a FAQ article.
+      MappingInbound:
+        Type: Simple
+      MappingOutbound:
+        Type: Simple
+      Type: FAQ::FAQAdd
+    FAQUpdate:
+      Description: Update a FAQ article.
+      MappingInbound:
+        Type: Simple
+      MappingOutbound:
+        Type: Simple
+      Type: FAQ::FAQUpdate
     ServiceGet:
       Description: Get a service by ID.
       MappingInbound:
@@ -126,6 +140,20 @@ Provider:
       MappingOutbound:
         Type: Simple
       Type: Change::WorkOrderSearch
+    ConfigItemCreate:
+      Description: Create a CMDB config item.
+      MappingInbound:
+        Type: Simple
+      MappingOutbound:
+        Type: Simple
+      Type: ConfigItem::ConfigItemCreate
+    ConfigItemUpdate:
+      Description: Update a CMDB config item (creates new version).
+      MappingInbound:
+        Type: Simple
+      MappingOutbound:
+        Type: Simple
+      Type: ConfigItem::ConfigItemUpdate
   Transport:
     Config:
       AdditionalHeaders: ~
@@ -158,6 +186,14 @@ Provider:
           RequestMethod:
             - GET
           Route: /FAQGet/:ItemID
+        FAQAdd:
+          RequestMethod:
+            - POST
+          Route: /FAQAdd
+        FAQUpdate:
+          RequestMethod:
+            - POST
+          Route: /FAQUpdate/:ItemID
         ServiceGet:
           RequestMethod:
             - GET
@@ -205,6 +241,14 @@ Provider:
             - GET
             - POST
           Route: /WorkOrderSearch
+        ConfigItemCreate:
+          RequestMethod:
+            - POST
+          Route: /ConfigItemCreate
+        ConfigItemUpdate:
+          RequestMethod:
+            - POST
+          Route: /ConfigItemUpdate/:ConfigItemID
     Type: HTTP::REST
 RemoteSystem: ''
 Requester:
