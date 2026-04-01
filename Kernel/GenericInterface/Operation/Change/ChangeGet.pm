@@ -65,7 +65,7 @@ sub Run {
         ErrorMessage => 'ChangeGet: ChangeID is required.',
     ) if !$ChangeID;
 
-    my %ChangeData = $ChangeObject->ChangeGet(
+    my $ChangeData = $ChangeObject->ChangeGet(
         ChangeID => $ChangeID,
         UserID   => $UserID,
     );
@@ -73,12 +73,12 @@ sub Run {
     return $Self->ReturnError(
         ErrorCode    => 'ChangeGet.NotFound',
         ErrorMessage => "ChangeGet: Change with ID $ChangeID not found.",
-    ) if !%ChangeData || !$ChangeData{ChangeID};
+    ) if !$ChangeData || !$ChangeData->{ChangeID};
 
     return {
         Success => 1,
         Data    => {
-            Change => \%ChangeData,
+            Change => $ChangeData,
         },
     };
 }

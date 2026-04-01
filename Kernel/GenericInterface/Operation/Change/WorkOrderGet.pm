@@ -65,7 +65,7 @@ sub Run {
         ErrorMessage => 'WorkOrderGet: WorkOrderID is required.',
     ) if !$WorkOrderID;
 
-    my %WorkOrderData = $WorkOrderObject->WorkOrderGet(
+    my $WorkOrderData = $WorkOrderObject->WorkOrderGet(
         WorkOrderID => $WorkOrderID,
         UserID      => $UserID,
     );
@@ -73,12 +73,12 @@ sub Run {
     return $Self->ReturnError(
         ErrorCode    => 'WorkOrderGet.NotFound',
         ErrorMessage => "WorkOrderGet: WorkOrder with ID $WorkOrderID not found.",
-    ) if !%WorkOrderData || !$WorkOrderData{WorkOrderID};
+    ) if !$WorkOrderData || !$WorkOrderData->{WorkOrderID};
 
     return {
         Success => 1,
         Data    => {
-            WorkOrder => \%WorkOrderData,
+            WorkOrder => $WorkOrderData,
         },
     };
 }
